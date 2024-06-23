@@ -9,14 +9,24 @@
 
   <td>Función</td>
   <dd>{{obtenerNombre()}}</dd>
-  
+
   <td>Capitalizado</td>
   <dd>{{nombreCapitalizado}}</dd>
 </dl>
 
-<button (click)="cambiarNombre()">
+<button
+  *ngIf="name == 'spiderman'"
+  (click)="cambiarNombre()">
   Cambiar Héroe
 </button>
-<button (click)="cambiarEdad()">
+
+<button
+  *ngIf="age !== 25"
+  (click)="cambiarEdad()">
   Cambiar Edad
+</button>
+
+<button
+  (click)="resetForm()">
+  Reset
 </button>
